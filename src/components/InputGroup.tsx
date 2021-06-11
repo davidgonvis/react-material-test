@@ -9,8 +9,9 @@ const useStyles = makeStyles({
   },
 });
 
-function InputGroup() {
+function InputGroup(props: any) {
   const classes = useStyles();
+  const { group_id } = props;
 
   const top100Films = ['', 'textvalue1', 'textvalue2', 'textvalue3', 'textvalue4', 'textvalue5'];
   const [value1, setValue1] = useState('');
@@ -25,7 +26,7 @@ function InputGroup() {
   return (
     <React.Fragment>
       <Typography variant="h4" className={classes.inputgroup}>
-        Group 1
+        Group {group_id}
       </Typography>
       <Grid container spacing={3}>
         <Grid item xs={12} sm={4}>
